@@ -1,8 +1,6 @@
-# Usamos la imagen oficial de Apache
-FROM httpd:2.4
+FROM php:8.0-apache
 
-# Copiamos el archivo index.html al directorio adecuado de Apache
-COPY index.html /usr/local/apache2/htdocs/
+COPY index.php /var/www/html/
 
-# Exponemos el puerto 80
 EXPOSE 80
+
